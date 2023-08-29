@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+    <title>RICOgraph - a data visualization project</title>
+    <!-- material icons -->
+    <link href = "https://cdn.augmentedlogic.com/fonts/material-icons/material-icons-round.css" rel="stylesheet">
+    <!-- visjs -->
+    <script type="text/javascript" src="https://cdn.augmentedlogic.com/vendor/visjs/vis-network.min.js"></script>
+
+    <script src="https://cdn.augmentedlogic.com/vendor/smallbox/0.2/smallbox.min.js"></script>
+    <link href = "https://cdn.augmentedlogic.com/vendor/smallbox/0.2/smallbox.min.css" rel = "stylesheet">
+    <!-- local assets -->
+    <script src="assets/ricograph.js?v=1"></script>
+    <link rel="stylesheet" href="assets/ricograph.css?v=1" />
+
+    <meta property="og:title" content="RICOgraph - a data visualization project" />
+    <meta property="og:description" content="Visualizing Donald Trump's indictments" />
+    <meta property="og:image" content="https://wolfha.github.com/ricograph/assets/opengrapgh.jpg" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  </head>
+
+  <body>
+
+  <div id="controls">
+    <div class="open-infobox">
+     <span class="material-icons-round controls-info">info</span>
+    </div>
+    <div class="open-refbox">
+     <span class="material-icons-round controls-info">toc</span>
+    </div>
+    <div class="action-refresh">
+     <span class="material-icons-round controls-info">refresh</span>
+   </div>
+  </div>
+
+  <div id="title">
+   <h1>RICOgraph</h1>
+   <div>Last Update: 2023-08-28 <br />(unfinished)</div>
+  </div>
+
+  <div id="loader">
+    <div class="center">
+      <h1>Loading</h1>
+      <div class="lds-dual-ring"></div>
+    </div>
+  </div>
+
+  <div id="mynetwork"></div>
+
+
+  <!-- contant for the info boxes -->
+  <div id="infobox">
+    <div>
+      <h2>About</h2>
+      <p>
+       This is some text for this box. The text can contain HTML.
+      </p>
+
+      <p>
+       There is not so much more to say, so please <a href="https://github.com/wolfha/smallbox">check out the github repo</a>.
+      </p>
+    </div>
+  </div>
+
+
+  <div id="refbox">
+    <div>
+      <h2>References</h2>
+
+      <div>
+       <p>Indictment Manhattan/New York <a href=""></a></p>
+       <p>Indictment District Court, S.D. Florida <a href="https://www.courtlistener.com/docket/67490070/united-states-v-trump/" target="_blank">Docket</a></p>
+       <p>Indictment Washington DC <a href="https://www.courtlistener.com/docket/67656604/united-states-v-trump/" target="_blank">Docket</a></p>
+       <p><a href="https://www.documentcloud.org/documents/23909569-trump-ga-indictment" target="_blank">Indictment</a> Foulton County/Georgia</p>
+      </div>
+
+      <div>
+       <p>Wikipedia</p>
+       <p>Wikipedia</p>
+       <p>Wikipedia</p>
+       <p>Wikipedia</p>
+      </div>
+
+      <div>
+       <p>Podcast:</p>    
+       <p>Podcast:</p>    
+       <p>Podcast:</p>    
+      </div>
+
+    </div>
+  </div>
+
+    <script type="text/javascript">
+        // main
+        document.addEventListener("DOMContentLoaded", function() {
+          loadRicoGraph();
+
+          var smallbox = new SmallBox();
+            smallbox.add("#infobox", ".open-infobox");
+            smallbox.add("#refbox", ".open-refbox");
+
+          var refresh = document.querySelector(".action-refresh");
+            refresh.addEventListener("click", function() {
+            location.reload();
+          });
+        });
+   </script>
+
+</body>
+</html>
