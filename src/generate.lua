@@ -91,8 +91,8 @@ local sidney_powell = visnet.node.new("sidney_powell", "Sidney Powell")
 local steve_lee = visnet.node.new("steve_lee", "Steve Lee")
       steve_lee:setGroup("defendant")
 
-local harrison_floy = visnet.node.new("harrison_floy", "Harrison Floy")
-      harrison_floy:setGroup("defendant")
+local harrison_floyd = visnet.node.new("harrison_floyd", "Harrison Floyd")
+      harrison_floyd:setGroup("defendant")
 
 local trevian_kutti = visnet.node.new("trevian_kutti", "Trevian Kutti")
       trevian_kutti:setGroup("defendant")
@@ -114,7 +114,7 @@ local carlos_de_oliveira = visnet.node.new("carlos_de_oliveira", "Carlos De Oliv
       -- add defendants to graph
       graph:addNodeBulk( { donald_trump, rudy_giuliani, ray_smith_III, cathy_latham, robert_cheeley, john_eastman,
                            david_shafer, kenneth_chesebro, mike_roman, shawn_still, jeffrey_clark, jenna_ellis, 
-                           mark_meadow, scott_hall, misty_hampton, sidney_powell, steve_lee, harrison_floy , trevian_kutti , georgia_unindicted } )
+                           mark_meadow, scott_hall, misty_hampton, sidney_powell, steve_lee, harrison_floyd , trevian_kutti , georgia_unindicted } )
 
       -- add florida defendants to graph
       graph:addNodeBulk( { walt_nauta , carlos_de_oliveira })
@@ -325,7 +325,7 @@ local location_manhattan = visnet.node.new("loc_manhattan", "Manhattan/New York"
     local d15 = visnet.edge.new(misty_hampton, charge_georgia_rico)
     local d16 = visnet.edge.new(sidney_powell, charge_georgia_rico)
     local d17 = visnet.edge.new(steve_lee, charge_georgia_rico)
-    local d18 = visnet.edge.new(harrison_floy, charge_georgia_rico)
+    local d18 = visnet.edge.new(harrison_floyd, charge_georgia_rico)
     local d19 = visnet.edge.new(trevian_kutti, charge_georgia_rico)
 
     graph:addEdgeBulk({ d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, d13, d14, d15, d16, d17, d18, d19 })
@@ -420,13 +420,13 @@ local location_manhattan = visnet.node.new("loc_manhattan", "Manhattan/New York"
 
     -- charge_solicitation_of_false_statements
     local gc_101 = visnet.edge.new(steve_lee, charge_georgia_solicitation_of_false_statements)
-    local gc_102 = visnet.edge.new(harrison_floy, charge_georgia_solicitation_of_false_statements)
+    local gc_102 = visnet.edge.new(harrison_floyd, charge_georgia_solicitation_of_false_statements)
     local gc_103 = visnet.edge.new(trevian_kutti, charge_georgia_solicitation_of_false_statements)
     graph:addEdgeBulk({ gc_101, gc_102, gc_103 })
 
     -- charge_influencing_witnesses
     local gc_111 = visnet.edge.new(steve_lee, charge_georgia_influencing_witnesses)
-    local gc_112 = visnet.edge.new(harrison_floy, charge_georgia_influencing_witnesses)
+    local gc_112 = visnet.edge.new(harrison_floyd, charge_georgia_influencing_witnesses)
     local gc_113 = visnet.edge.new(trevian_kutti, charge_georgia_influencing_witnesses)
     graph:addEdgeBulk({ gc_111, gc_112, gc_113 })
 

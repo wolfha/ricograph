@@ -15,15 +15,15 @@
     <script src="assets/ricograph.js?v=1"></script>
     <link rel="stylesheet" href="assets/ricograph.css?v=1" />
 
-    <meta property="og:title" content="RICOgraph - a data visualization project" />
-    <meta property="og:description" content="Visualizing Donald Trump's indictments" />
+    <meta property="og:title" content="RICOgraph - Visualizing Donald Trump's indictments" />
+    <meta property="og:description" content="Donald Trump's indictments as a network graph" />
     <meta property="og:image" content="https://wolfha.github.io/ricograph/assets/opengraph.jpg" />
 
     <meta name="twitter:card" content="summary_large_image">
     <meta property="twitter:domain" content="wolfha.github.io">
     <meta property="twitter:url" content="https://wolfha.github.io/ricograph/">
-    <meta name="twitter:title" content="RICOgraph - a data visualization project">
-    <meta name="twitter:description" content="Visualizing Donald Trump's indictments">
+    <meta name="twitter:title" content="RICOgraph - Visualizing Donald Trump's indictments">
+    <meta name="twitter:description" content="Donald Trump's indictments as a network graph">
     <meta name="twitter:image" content="https://wolfha.github.io/ricograph/assets/opengraph.jpg">
 
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -36,9 +36,6 @@
     <div class="open-infobox">
      <span class="material-icons-round controls-info">info</span>
     </div>
-    <div class="open-refbox">
-     <span class="material-icons-round controls-info">toc</span>
-    </div>
     <div class="action-refresh">
      <span class="material-icons-round controls-info">refresh</span>
    </div>
@@ -46,7 +43,7 @@
 
   <div id="title">
    <h1>RICOgraph</h1>
-   <div>Last Update: 2023-08-28 <br />(unfinished)</div>
+   <div>Updated: 2023-08-30</div>
   </div>
 
   <div id="loader">
@@ -64,42 +61,42 @@
     <div>
       <h2>About</h2>
       <p>
-       This is some text for this box. The text can contain HTML.
+       This data visualization is based on publicly available data (see reference section) and does not represent a legal opinion or statement. Graph generated
+       with the help of <a href="https://visjs.org/" target="_blank">visjs</a> and <a href="https://github.com/wolfha/lua-visnet" target="_blank">lua-visnet</a>.
       </p>
 
       <p>
-       There is not so much more to say, so please <a href="https://github.com/wolfha/smallbox">check out the github repo</a>.
+       Source code and data is <a href="https://github.com/wolfha/ricograph" target="_blank">available here</a>.
+       If you find any issue or want to leave any comment, please use the <a href="https://github.com/wolfha/ricograph/issues" target="_blank">issues</a> section of that repository.
       </p>
-    </div>
-  </div>
 
 
-  <div id="refbox">
-    <div>
       <h2>References</h2>
 
       <div>
-       <p>Indictment Manhattan/New York <a href=""></a></p>
-       <p>Indictment District Court, S.D. Florida <a href="https://www.courtlistener.com/docket/67490070/united-states-v-trump/" target="_blank">Docket</a></p>
-       <p>Indictment Washington DC <a href="https://www.courtlistener.com/docket/67656604/united-states-v-trump/" target="_blank">Docket</a></p>
-       <p><a href="https://www.documentcloud.org/documents/23909569-trump-ga-indictment" target="_blank">Indictment</a> Foulton County/Georgia</p>
+       <p>Indictment <a href="https://manhattanda.org/wp-content/uploads/2023/04/Donald-J.-Trump-Indictment.pdf" target="_blank">Manhattan/New York</a>,
+       Superceeding Indictment in the Southern District of Florida <a href="https://www.courtlistener.com/docket/67490070/united-states-v-trump/" target="_blank">Docket</a>,
+       Indictment Washington DC <a href="https://www.courtlistener.com/docket/67656604/united-states-v-trump/" target="_blank">Docket</a>,
+       <a href="https://www.documentcloud.org/documents/23909569-trump-ga-indictment" target="_blank">Indictment</a> in Foulton County/Georgia
+       </p>
       </div>
 
       <div>
-       <p>Wikipedia</p>
-       <p>Wikipedia</p>
-       <p>Wikipedia</p>
-       <p>Wikipedia</p>
+       <p>For further reading see also the <a href="https://en.wikipedia.org/wiki/Indictments_against_Donald_Trump" target="_blank">Wikipedia</a> article.
       </div>
 
       <div>
-       <p>Podcast:</p>    
-       <p>Podcast:</p>    
-       <p>Podcast:</p>    
+       <p>There are also some list of podcasts worth listening to: <a href="https://podcasts.apple.com/gb/podcast/jack/id1317481380" target="_blank">Jack</a> ,
+          <a href="https://podcasts.apple.com/us/podcast/prosecuting-donald-trump/id1679657705" target="_blank">Procecuting Donald Trump</a>,
+          <a href="https://podcasts.apple.com/us/podcast/opening-arguments/id1147092464" target="_blank">Opening Arguments</a></p>
       </div>
 
     </div>
+
+
+    </div>
   </div>
+
 
     <script type="text/javascript">
         // main
@@ -108,7 +105,6 @@
 
           var smallbox = new SmallBox();
             smallbox.add("#infobox", ".open-infobox");
-            smallbox.add("#refbox", ".open-refbox");
 
           var refresh = document.querySelector(".action-refresh");
             refresh.addEventListener("click", function() {
